@@ -3,6 +3,8 @@ import { getProjects } from '@/sanity/queries/projects';
 export default async function Projects() {
   const projects = await getProjects();
 
+  console.log(projects);
+
   return (
     <section>
       <h1>Projects</h1>

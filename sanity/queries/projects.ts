@@ -11,8 +11,19 @@ export async function getProjects(): Promise<Project[]> {
             name,
             "image": image.asset->url,
             "alt": image.alt,
+            featured,
+            year,
+            madeAt,
+            builtWith,
             url,
             content
         }`
   );
 }
+
+// Retrieve project landing content
+// export async function getProjectLanding() {
+//   return await createClient(clientConfig).fetch(
+//     groq``
+//   )
+// }

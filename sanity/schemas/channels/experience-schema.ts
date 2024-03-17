@@ -9,6 +9,11 @@ const experience = {
       type: 'string'
     },
     {
+      name: 'enabled',
+      title: 'Enabled',
+      type: 'boolean'
+    },
+    {
       name: 'role',
       title: 'Role',
       type: 'string'

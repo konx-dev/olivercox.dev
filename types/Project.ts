@@ -6,6 +6,10 @@ export type Project = {
   name: string;
   slug: string;
   image: string;
+  featured: boolean;
+  year: Date;
+  madeAt: string;
+  builtWith: Array<string>;
   url: string;
   content: PortableTextBlock[];
 };
