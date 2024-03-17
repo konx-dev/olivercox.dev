@@ -9,6 +9,12 @@ const insight = {
       type: 'string'
     },
     {
+      name: 'description',
+      title: 'Description',
+      type: 'text',
+      rows: 2
+    },
+    {
       name: 'author',
       title: 'Author',
       type: 'reference',
@@ -41,6 +47,11 @@ const insight = {
           type: 'string'
         }
       ]
+    },
+    {
+      name: 'featured',
+      title: 'Featured',
+      type: 'boolean'
     },
     {
       name: 'introduction',

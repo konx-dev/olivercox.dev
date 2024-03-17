@@ -1,4 +1,4 @@
-import { Insight } from '@/types/Insight';
+import { Insight, InsightsLanding } from '@/types/Insight';
 import { createClient, groq } from 'next-sanity';
 import clientConfig from '@/sanity/config/client-config';
 
@@ -10,6 +10,8 @@ export async function getInsights(): Promise<Insight[]> {
             _createdAt,
             name,
             "slug": slug.current,
+            featured,
+            description,
             "image": image.asset->url,
             "alt": image.alt,
             content
@@ -24,12 +26,26 @@ export async function getInsight(slug: string): Promise<Insight> {
       _id,
       _createdAt,
       name,
+      author->,
+      publishedDate,
+      description,
       "slug": slug.current,
       "image": image.asset->url,
       "alt": image.alt,
-      featured,
+      introduction,
       content
   }`,
     { slug }
+  );
+}
+
+// Retrieve insights landing content
+export async function getInsightsLanding(): Promise<InsightsLanding> {
+  return await createClient(clientConfig).fetch(
+    groq`*[_type == "insightsLanding"]{
+      _id,
+      _createdAt,
+      name
+    }`
   );
 }

@@ -1,7 +1,11 @@
-import { getInsights } from '@/sanity/queries/insights';
+import { getInsights, getInsightsLanding } from '@/sanity/queries/insights';
 
 export default async function Insights() {
   const insights = await getInsights();
+
+  const insightsLanding = await getInsightsLanding();
+
+  console.log(insightsLanding);
 
   return (
     <section>
