@@ -1,9 +1,11 @@
-import { getProjects } from '@/sanity/queries/projects';
+import { getProjectsLanding, getProjects } from '@/sanity/queries/projects';
 
 export default async function Projects() {
   const projects = await getProjects();
 
-  console.log(projects);
+  const projectsLanding = await getProjectsLanding();
+
+  console.log(projectsLanding);
 
   return (
     <section>

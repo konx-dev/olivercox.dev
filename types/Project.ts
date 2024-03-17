@@ -13,3 +13,10 @@ export type Project = {
   url: string;
   content: PortableTextBlock[];
 };
+
+export type ProjectsLanding = {
+  _id: string;
+  _createdAt: Date;
+  name: string;
+  disclaimer: PortableTextBlock[];
+};
