@@ -9,12 +9,6 @@ const project = {
       type: 'string'
     },
     {
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
-      options: { source: 'name' }
-    },
-    {
       name: 'image',
       title: 'Image',
       type: 'image',
@@ -26,6 +20,21 @@ const project = {
           type: 'string'
         }
       ]
+    },
+    {
+      name: 'year',
+      title: 'Year',
+      type: 'string'
+    },
+    {
+      name: 'madeAt',
+      title: 'Made at',
+      type: 'string'
+    },
+    {
+      name: 'builtWidth',
+      title: 'Built with',
+      type: 'string'
     },
     {
       name: 'url',

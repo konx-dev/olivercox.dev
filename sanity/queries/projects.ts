@@ -9,7 +9,6 @@ export async function getProjects(): Promise<Project[]> {
             _id,
             _createdAt,
             name,
-            "slug": slug.current,
             "image": image.asset->url,
             "alt": image.alt,
             url,

@@ -12,7 +12,6 @@ export async function getInsights(): Promise<Insight[]> {
             "slug": slug.current,
             "image": image.asset->url,
             "alt": image.alt,
-            url,
             content
         }`
   );
@@ -29,7 +28,6 @@ export async function getInsight(slug: string): Promise<Insight> {
       "image": image.asset->url,
       "alt": image.alt,
       featured,
-      url,
       content
   }`,
     { slug }

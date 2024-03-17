@@ -9,6 +9,21 @@ const insight = {
       type: 'string'
     },
     {
+      name: 'author',
+      title: 'Author',
+      type: 'reference',
+      to: [{ type: 'author' }]
+    },
+    {
+      name: 'publishedDate',
+      title: 'Published Date',
+      type: 'date',
+      options: {
+        dateFormat: 'MMMM, YYYY',
+        calendarTodayLabel: 'Today'
+      }
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
@@ -28,9 +43,10 @@ const insight = {
       ]
     },
     {
-      name: 'url',
-      title: 'URL',
-      type: 'url'
+      name: 'introduction',
+      title: 'Introduction',
+      type: 'array',
+      of: [{ type: 'block' }]
     },
     {
       name: 'content',
