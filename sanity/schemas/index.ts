@@ -7,7 +7,8 @@ import experience from './channels/experience-schema';
 // Singles & Pages
 import projectsLanding from './singles/projects-landing';
 import insightsLanding from './singles/insights-landing';
+import homepage from './singles/homepage';
 
-const schemas = [project, insight, author, experience, projectsLanding, insightsLanding];
+const schemas = [project, insight, author, experience, projectsLanding, insightsLanding, homepage];
 
 export default schemas;
