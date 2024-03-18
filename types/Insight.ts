@@ -4,7 +4,7 @@ export type Insight = {
   _id: string;
   _createdAt: Date;
   name: string;
-  author: Object;
+  author: object;
   publishedDate: Date;
   featured: boolean;
   description: string;
