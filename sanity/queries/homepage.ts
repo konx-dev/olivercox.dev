@@ -5,7 +5,7 @@ import clientConfig from '@/sanity/config/client-config';
 // Retrieve insights landing content
 export async function getHomepage(): Promise<Homepage> {
   return await createClient(clientConfig).fetch(
-    groq`*[_type == "homepage"]{
+    groq`*[_type == "homepage"][0]{
       _id,
       _createdAt,
       name,
@@ -13,6 +13,8 @@ export async function getHomepage(): Promise<Homepage> {
       introduction,
       body,
       insights
-    }`
+    }`,
+    {},
+    { cache: 'no-store' }
   );
 }

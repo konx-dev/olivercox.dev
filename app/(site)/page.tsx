@@ -7,7 +7,7 @@ export default async function Home() {
 
   return (
     <section>
-      <h1>Homepage</h1>
+      <h1>{homepage.heading}</h1>
     </section>
   );
 }

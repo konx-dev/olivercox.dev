@@ -42,7 +42,7 @@ export async function getInsight(slug: string): Promise<Insight> {
 // Retrieve insights landing content
 export async function getInsightsLanding(): Promise<InsightsLanding> {
   return await createClient(clientConfig).fetch(
-    groq`*[_type == "insightsLanding"]{
+    groq`*[_type == "insightsLanding"][0]{
       _id,
       _createdAt,
       name

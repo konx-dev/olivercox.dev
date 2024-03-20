@@ -26,7 +26,7 @@ export async function getProjects(): Promise<Project[]> {
 // Retrieve project landing content
 export async function getProjectsLanding(): Promise<ProjectsLanding> {
   return await createClient(clientConfig).fetch(
-    groq`*[_type == "projectsLanding"]{
+    groq`*[_type == "projectsLanding"][0]{
       _id,
       _createdAt,
       name,

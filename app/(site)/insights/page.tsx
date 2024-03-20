@@ -1,4 +1,5 @@
 import { getInsights, getInsightsLanding } from '@/sanity/queries/insights';
+import { useState } from 'react';
 
 export default async function Insights() {
   const insights = await getInsights();
@@ -9,7 +10,7 @@ export default async function Insights() {
 
   return (
     <section>
-      <h1>Insights</h1>
+      <h1>{insightsLanding.name}</h1>
       <div>
         {insights.map((insight) => (
           <div key={insight._id}>{insight.name}</div>
