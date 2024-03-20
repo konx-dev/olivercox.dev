@@ -49,3 +49,20 @@ export async function getInsightsLanding(): Promise<InsightsLanding> {
     }`
   );
 }
+
+// Retrieve ONLY featured insights, used on the homepage
+export async function getFeaturedInsights(): Promise<Insight[]> {
+  return await createClient(clientConfig).fetch(
+    groq`*[_type == "insight" && featured]{
+            _id,
+            _createdAt,
+            name,
+            "slug": slug.current,
+            featured,
+            description,
+            "image": image.asset->url,
+            "alt": image.alt,
+            content
+        }`
+  );
+}

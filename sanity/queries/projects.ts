@@ -34,3 +34,22 @@ export async function getProjectsLanding(): Promise<ProjectsLanding> {
     }`
   );
 }
+
+// Retrieve ALL available projects
+export async function getFeaturedProjects(): Promise<Project[]> {
+  return await createClient(clientConfig).fetch(
+    groq`*[_type == "project" && featured]{
+            _id,
+            _createdAt,
+            name,
+            "image": image.asset->url,
+            "alt": image.alt,
+            featured,
+            year,
+            madeAt,
+            builtWith,
+            url,
+            content
+        }`
+  );
+}
