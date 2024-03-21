@@ -9,7 +9,7 @@ import { visionTool } from '@sanity/vision';
 const singletonActions = new Set(['publish', 'discardChanges', 'restore']);
 
 // Define the singleton document types
-const singletonTypes = new Set(['homepage', 'insightsLanding', 'projectsLanding']);
+const singletonTypes = new Set(['homepage', 'insightsLanding', 'projectsLanding', 'globals']);
 
 const config = defineConfig({
   projectId: 'c52tm4o6',
@@ -23,12 +23,25 @@ const config = defineConfig({
         S.list()
           .title('Content')
           .items([
+            S.listItem()
+              .title('Settings')
+              .child(
+                S.list()
+                  .title('Name')
+                  .items([
+                    S.listItem()
+                      .title('Globals')
+                      .id('globals')
+                      .child(S.document().schemaType('globals').documentId('globals'))
+                  ])
+              ),
+
             // Singles - Instead of rendering a list of documents, we render a single document, specifying the `documentId` manually
             S.listItem()
               .title('Singles')
               .child(
                 S.list()
-                  .title('Pages')
+                  .title('Name')
                   .items([
                     S.listItem()
                       .title('Homepage')
@@ -44,12 +57,18 @@ const config = defineConfig({
                       .child(S.document().schemaType('projectsLanding').documentId('projectsLanding'))
                   ])
               ),
-
-            // Regular document types
-            S.documentTypeListItem('experience').title('Experience'),
-            S.documentTypeListItem('author').title('Authors'),
-            S.documentTypeListItem('insight').title('Insights'),
-            S.documentTypeListItem('project').title('Projects')
+            S.listItem()
+              .title('Channels')
+              .child(
+                S.list()
+                  .title('Name')
+                  .items([
+                    S.documentTypeListItem('experience').title('Experience'),
+                    S.documentTypeListItem('author').title('Authors'),
+                    S.documentTypeListItem('insight').title('Insights'),
+                    S.documentTypeListItem('project').title('Projects')
+                  ])
+              )
           ])
     }),
     visionTool()

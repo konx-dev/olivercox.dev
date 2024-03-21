@@ -9,6 +9,9 @@ import projectsLanding from './singles/projects-landing';
 import insightsLanding from './singles/insights-landing';
 import homepage from './singles/homepage';
 
-const schemas = [project, insight, author, experience, projectsLanding, insightsLanding, homepage];
+// Misc
+import globals from './globals';
+
+const schemas = [project, insight, author, experience, projectsLanding, insightsLanding, homepage, globals];
 
 export default schemas;
