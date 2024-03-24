@@ -1,3 +1,5 @@
+import { defineArrayMember, defineField } from 'sanity';
+
 const insight = {
   name: 'insight',
   title: 'Insights',
@@ -59,12 +61,25 @@ const insight = {
       type: 'array',
       of: [{ type: 'block' }]
     },
-    {
-      name: 'content',
-      title: 'Content',
+    defineField({
+      name: 'pageBuilder',
+      title: 'Page Builder',
       type: 'array',
-      of: [{ type: 'block' }]
-    }
+      of: [
+        defineArrayMember({
+          name: 'contentSimple',
+          type: 'contentSimple'
+        }),
+        defineArrayMember({
+          name: 'imageSingle',
+          type: 'imageSingle'
+        }),
+        defineArrayMember({
+          name: 'divider',
+          type: 'divider'
+        })
+      ]
+    })
   ]
 };
 

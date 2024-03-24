@@ -12,6 +12,23 @@ import homepage from './singles/homepage';
 // Misc
 import globals from './globals';
 
-const schemas = [project, insight, author, experience, projectsLanding, insightsLanding, homepage, globals];
+// Page Builder
+import { contentSimpleType } from './pageBuilder/contentSimple';
+import { imageSingleType } from './pageBuilder/imageSingle';
+import { dividerType } from './pageBuilder/divider';
+
+const schemas = [
+  project,
+  insight,
+  author,
+  experience,
+  projectsLanding,
+  insightsLanding,
+  homepage,
+  globals,
+  contentSimpleType,
+  imageSingleType,
+  dividerType
+];
 
 export default schemas;

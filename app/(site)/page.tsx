@@ -17,11 +17,11 @@ export default async function Home() {
     <section>
       {/* Left column */}
       <div>
-        <div>-- logo --</div>
+        <div>-- logo (hardcode) --</div>
         <h1>{page.heading}</h1>
         <RichText ctx={page.introduction} />
-        <div>-- socials --</div>
-        <div>-- lightswitch --</div>
+        <div>-- socials (hardcode) --</div>
+        <div>-- lightswitch (hardcode) --</div>
         <div>
           <RichText ctx={globals.builtWith} />
         </div>
