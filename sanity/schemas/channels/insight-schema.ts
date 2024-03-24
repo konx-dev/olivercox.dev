@@ -4,6 +4,12 @@ const insight = {
   name: 'insight',
   title: 'Insights',
   type: 'document',
+  groups: [
+    {
+      name: 'pageBuilder',
+      title: 'Page Builder'
+    }
+  ],
   fields: [
     {
       name: 'name',
@@ -65,6 +71,7 @@ const insight = {
       name: 'pageBuilder',
       title: 'Page Builder',
       type: 'array',
+      group: 'pageBuilder',
       of: [
         defineArrayMember({
           name: 'contentSimple',
