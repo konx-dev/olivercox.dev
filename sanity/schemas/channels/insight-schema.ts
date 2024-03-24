@@ -77,6 +77,10 @@ const insight = {
         defineArrayMember({
           name: 'divider',
           type: 'divider'
+        }),
+        defineArrayMember({
+          name: 'code',
+          type: 'codeSnippet'
         })
       ]
     })

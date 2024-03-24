@@ -16,6 +16,7 @@ import globals from './globals';
 import { contentSimpleType } from './pageBuilder/contentSimple';
 import { imageSingleType } from './pageBuilder/imageSingle';
 import { dividerType } from './pageBuilder/divider';
+import { codeSnippetType } from './pageBuilder/codeSnippet';
 
 const schemas = [
   project,
@@ -28,7 +29,8 @@ const schemas = [
   globals,
   contentSimpleType,
   imageSingleType,
-  dividerType
+  dividerType,
+  codeSnippetType
 ];
 
 export default schemas;

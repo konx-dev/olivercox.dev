@@ -31,7 +31,8 @@ export async function getInsight(slug: string): Promise<Insight> {
       "slug": slug.current,
       "image": image.asset->url,
       "alt": image.alt,
-      introduction
+      introduction,
+      pageBuilder
   }`,
     { slug }
   );

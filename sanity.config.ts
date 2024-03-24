@@ -4,6 +4,7 @@ import schemas from './sanity/schemas';
 // Tools
 import { structureTool } from 'sanity/structure';
 import { visionTool } from '@sanity/vision';
+import { codeInput } from '@sanity/code-input';
 
 // Define the actions that should be available for singleton documents
 const singletonActions = new Set(['publish', 'discardChanges', 'restore']);
@@ -71,7 +72,8 @@ const config = defineConfig({
               )
           ])
     }),
-    visionTool()
+    visionTool(),
+    codeInput()
   ],
   schema: {
     types: schemas,
