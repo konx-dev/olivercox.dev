@@ -1,5 +1,4 @@
 import { getInsights, getInsightsLanding } from '@/sanity/queries/insights';
-import { useState } from 'react';
 
 export default async function Insights() {
   const insights = await getInsights();

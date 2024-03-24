@@ -8,8 +8,6 @@ import RichText from '@/components/atom/RichText';
 import { getHomepage } from '@/sanity/queries/homepage';
 import { getGlobals } from '@/sanity/queries/globals';
 
-// Types
-
 export default async function Home() {
   const page = await getHomepage();
 
