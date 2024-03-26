@@ -34,7 +34,8 @@ export async function getInsight(slug: string): Promise<Insight> {
       introduction,
       pageBuilder
   }`,
-    { slug }
+    { slug },
+    { cache: 'no-store' }
   );
 }
 

@@ -74,20 +74,20 @@ const insight = {
       group: 'pageBuilder',
       of: [
         defineArrayMember({
-          name: 'contentSimple',
-          type: 'contentSimple'
+          name: 'ContentSimple',
+          type: 'ContentSimple'
         }),
         defineArrayMember({
-          name: 'imageSingle',
-          type: 'imageSingle'
+          name: 'ImageSingle',
+          type: 'ImageSingle'
         }),
         defineArrayMember({
-          name: 'divider',
-          type: 'divider'
+          name: 'Divider',
+          type: 'Divider'
         }),
         defineArrayMember({
-          name: 'code',
-          type: 'codeSnippet'
+          name: 'Code',
+          type: 'CodeSnippet'
         })
       ]
     })

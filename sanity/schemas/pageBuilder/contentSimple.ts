@@ -1,7 +1,7 @@
 import { defineField, defineType } from 'sanity';
 
 export const contentSimpleType = defineType({
-  name: 'contentSimple',
+  name: 'ContentSimple',
   type: 'object',
   title: 'Content',
   fields: [

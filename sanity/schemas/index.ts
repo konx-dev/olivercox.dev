@@ -13,10 +13,10 @@ import homepage from './singles/homepage';
 import globals from './globals';
 
 // Page Builder
-import { contentSimpleType } from './pageBuilder/contentSimple';
-import { imageSingleType } from './pageBuilder/imageSingle';
-import { dividerType } from './pageBuilder/divider';
-import { codeSnippetType } from './pageBuilder/codeSnippet';
+import { contentSimpleType } from './pageBuilder/ContentSimple';
+import { imageSingleType } from './pageBuilder/ImageSingle';
+import { dividerType } from './pageBuilder/Divider';
+import { codeSnippetType } from './pageBuilder/CodeSnippet';
 
 const schemas = [
   project,

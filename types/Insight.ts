@@ -11,7 +11,7 @@ export type Insight = {
   slug: string;
   image: string;
   introduction: PortableTextBlock[];
-  pageBuilder: object;
+  pageBuilder: object[];
 };
 
 export type InsightsLanding = {

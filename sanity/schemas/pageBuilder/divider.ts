@@ -1,7 +1,7 @@
 import { defineField, defineType } from 'sanity';
 
 export const dividerType = defineType({
-  name: 'divider',
+  name: 'Divider',
   type: 'object',
   title: 'Divider',
   fields: [

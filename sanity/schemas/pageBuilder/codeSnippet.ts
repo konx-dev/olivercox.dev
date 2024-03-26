@@ -1,13 +1,13 @@
 import { defineField, defineType } from 'sanity';
 
 export const codeSnippetType = defineType({
-  name: 'codeSnippet',
+  name: 'CodeSnippet',
   type: 'object',
   title: 'Code',
   fields: [
     defineField({
       type: 'code',
-      name: 'codeSnippet',
+      name: 'CodeSnippet',
       title: 'Code',
       options: {
         language: 'javascript',
