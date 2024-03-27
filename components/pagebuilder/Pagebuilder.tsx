@@ -20,9 +20,8 @@ export default function PageBuilder({ ctx }: { ctx: object[] }) {
       {ctx.map((block: any, index: number) => {
         console.log('pagebuilder', block);
         const SanityComponent = sanityComponents[block._type];
-
         return (
-          <div key={index}>
+          <div key={`${block._id}-${index}`}>
             <SanityComponent ctx={block} key={block._id} />
           </div>
         );
