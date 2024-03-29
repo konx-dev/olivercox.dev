@@ -8,7 +8,7 @@ export type Project = {
   image: string;
   alt: string;
   featured: boolean;
-  year: Date;
+  year: string;
   madeAt: string;
   builtWith: Array<string>;
   url: string;

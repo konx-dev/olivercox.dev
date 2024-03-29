@@ -4,12 +4,14 @@ export type Insight = {
   _id: string;
   _createdAt: Date;
   name: string;
-  author: object;
-  publishedDate: Date;
+  author: any;
+  authorImage: string;
+  publishedDate: string;
   featured: boolean;
   description: string;
   slug: string;
   image: string;
+  alt: string;
   introduction: PortableTextBlock[];
   pageBuilder: object[];
 };

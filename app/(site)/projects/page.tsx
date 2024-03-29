@@ -12,7 +12,13 @@ export default async function Projects() {
       <h1>Projects</h1>
       <div>
         {projects.map((project) => (
-          <div key={project._id}>{project.name}</div>
+          <div key={project._id}>
+            <div>{project.name}</div>
+            <div>{project.year}</div>
+            <div>{project.madeAt}</div>
+            <div>{project.builtWith}</div>
+            <div>{project.url}</div>
+          </div>
         ))}
       </div>
     </section>

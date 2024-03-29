@@ -12,9 +12,14 @@ export async function getInsights(): Promise<Insight[]> {
             "slug": slug.current,
             featured,
             description,
+            publishedDate,
+            author->,
+            "authorImage": author->image.asset->url,
             "image": image.asset->url,
             "alt": image.alt
-        }`
+        }`,
+    {},
+    { cache: 'no-store' }
   );
 }
 
@@ -58,6 +63,7 @@ export async function getFeaturedInsights(): Promise<Insight[]> {
             _createdAt,
             name,
             "slug": slug.current,
+            publishedDate,
             featured,
             description,
             "image": image.asset->url,

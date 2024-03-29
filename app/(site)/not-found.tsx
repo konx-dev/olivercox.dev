@@ -1,5 +1,12 @@
+import Link from 'next/link';
+
 function NotFoundPage() {
-  return <h1>Page not found</h1>;
+  return (
+    <div>
+      <h1>Oops.. something went wrong</h1>
+      <Link href="/">Return Home</Link>
+    </div>
+  );
 }
 
 export default NotFoundPage;
