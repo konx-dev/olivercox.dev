@@ -31,6 +31,7 @@ export async function getInsight(slug: string): Promise<Insight> {
       _createdAt,
       name,
       author->,
+      "authorImage": author->image.asset->url,
       publishedDate,
       description,
       "slug": slug.current,
