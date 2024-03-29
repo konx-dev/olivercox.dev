@@ -50,6 +50,8 @@ export async function getFeaturedProjects(): Promise<Project[]> {
             builtWith,
             url,
             content
-        }`
+        }`,
+    {},
+    { cache: 'no-store' }
   );
 }

@@ -8,6 +8,6 @@ export type Experience = {
   role: string;
   company: string;
   description: PortableTextBlock[];
-  startYear: Date;
-  endYear: Date;
+  startYear: string;
+  endYear: string;
 };

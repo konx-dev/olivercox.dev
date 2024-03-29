@@ -6,6 +6,7 @@ export type Project = {
   name: string;
   slug: string;
   image: string;
+  alt: string;
   featured: boolean;
   year: Date;
   madeAt: string;
