@@ -7,6 +7,7 @@ import RichText from '@/components/atom/RichText';
 // Queries
 import { getHomepage } from '@/sanity/queries/homepage';
 import { getGlobals } from '@/sanity/queries/globals';
+import ThemeSwitch from '@/components/atom/ThemeSwitch';
 
 export default async function Home() {
   const page = await getHomepage();
@@ -21,7 +22,9 @@ export default async function Home() {
         <h1>{page.heading}</h1>
         <RichText ctx={page.introduction} />
         <div>-- socials (hardcode) --</div>
-        <div>-- lightswitch (hardcode) --</div>
+        <div>
+          <ThemeSwitch />
+        </div>
         <div>
           <RichText ctx={globals.builtWith} />
         </div>

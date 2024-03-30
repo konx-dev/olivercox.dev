@@ -6,8 +6,6 @@ import Image from 'next/image';
 export default async function Experience() {
   const projects = await getFeaturedProjects();
 
-  console.log('projects ', projects);
-
   return (
     <div>
       <h3>Projects</h3>
