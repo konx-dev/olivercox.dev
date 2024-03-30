@@ -7,8 +7,8 @@ export default async function Experience() {
   const experience = await getExperience();
 
   return (
-    <div>
-      <h3>Experience</h3>
+    <div className="mb-8 lg:mb-16">
+      <h3 className="mb-4 text-heading-lg font-bold">Experience</h3>
       <div>
         {experience.map((entry) => (
           <div key={entry._id}>

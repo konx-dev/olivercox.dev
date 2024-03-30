@@ -22,14 +22,14 @@ const config: Config = {
     },
     colors: {
       black: {
-        300: '#EDEDED',
         500: '#A1A1A1',
         700: '#333333',
         900: '#000000'
       },
       white: {
         100: '#FFFFFF',
-        500: '#F2F2F2'
+        500: '#F2F2F2',
+        700: '#EDEDED'
       },
       blue: {
         300: '#4AC1D2',

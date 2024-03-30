@@ -8,11 +8,9 @@ import RichText from '../atom/RichText';
 export default async function Experience({ insightsBody }: { insightsBody: PortableTextBlock[] }) {
   const insights = await getFeaturedInsights();
 
-  console.log(insights);
-
   return (
-    <div>
-      <h3>Insights</h3>
+    <div className="my-8 lg:my-16">
+      <h3 className="mb-4 text-heading-lg font-bold">Insights</h3>
       {insightsBody && <RichText ctx={insightsBody} />}
       <div>
         {insights.map((insight) => (

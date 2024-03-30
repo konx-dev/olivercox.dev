@@ -19,23 +19,33 @@ export default async function Home() {
       {/* Left column */}
       <div>
         <div>-- logo (hardcode) --</div>
-        <h1 className="text-heading-xl">{page.heading}</h1>
-        <RichText ctx={page.introduction} />
-        <div>-- socials (hardcode) --</div>
-        <div>
+        <h1 className="text-heading-xl font-bold mb-2">{page.heading}</h1>
+        <div className="wysiwyg text-heading-md">
+          <RichText ctx={page.introduction} />
+        </div>
+
+        <div className="hidden">-- socials (hardcode) --</div>
+        <div className="">
           <ThemeSwitch />
         </div>
-        <div>
+        <div className="hidden">
           <RichText ctx={globals.builtWith} />
         </div>
       </div>
       {/* Right column */}
-      <div>
-        <RichText ctx={page.body} />
-
-        <ExperienceWrapper />
-        <ProjectsWrapper />
-        <InsightsWrapper insightsBody={page.insights} />
+      <div className="flex flex-col">
+        <div className="order-3">
+          <RichText ctx={page.body} />
+        </div>
+        <div className="order-2">
+          <ExperienceWrapper />
+        </div>
+        <div className="order-1">
+          <ProjectsWrapper />
+        </div>
+        <div className="order-4">
+          <InsightsWrapper insightsBody={page.insights} />
+        </div>
       </div>
     </section>
   );

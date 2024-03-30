@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  .wysiwyg {
+    @apply text-black-900 dark:text-black-500;
+  }
+
+  .wysiwyg a {
+    @apply dark:text-white-700 text-red-500 underline font-medium;
+  }
+}
