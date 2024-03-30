@@ -1,11 +1,6 @@
-export default function ImageSingle({ ctx }: { ctx: any }) {
-  console.log(ctx);
+import { refConvert } from '@/helpers';
+import Image from 'next/image';
 
-  return (
-    <>
-      {/* <div>{ctx.image}</div>
-      <div>{ctx.image.alt}</div> */}
-      do nothing
-    </>
-  );
+export default function ImageSingle({ ctx }: { ctx: any }) {
+  return <Image src={refConvert(ctx.image)} alt={ctx.image.alt} width={200} height={200} />;
 }
