@@ -5,8 +5,6 @@ export default async function Insights() {
 
   const insightsLanding = await getInsightsLanding();
 
-  console.log(insights);
-
   return (
     <section>
       <h1>{insightsLanding.name}</h1>

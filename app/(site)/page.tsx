@@ -15,11 +15,11 @@ export default async function Home() {
   const globals = await getGlobals();
 
   return (
-    <section>
+    <section className="container px-4 flex flex-col lg:flex-row">
       {/* Left column */}
       <div>
         <div>-- logo (hardcode) --</div>
-        <h1>{page.heading}</h1>
+        <h1 className="text-heading-xl">{page.heading}</h1>
         <RichText ctx={page.introduction} />
         <div>-- socials (hardcode) --</div>
         <div>
