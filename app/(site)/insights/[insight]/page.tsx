@@ -11,6 +11,8 @@ export default async function Insight({ params }: Props) {
   const slug = params.insight;
   const insight = await getInsight(slug);
 
+  // console.log(insight);
+
   if (!insight) {
     notFound();
   }

@@ -38,8 +38,8 @@ export async function getInsight(slug: string): Promise<Insight> {
       "image": image.asset->url,
       "alt": image.alt,
       introduction,
-      pageBuilder
-  }`,
+      pageBuilder,
+    }`,
     { slug },
     { cache: 'no-store' }
   );
@@ -69,6 +69,8 @@ export async function getFeaturedInsights(): Promise<Insight[]> {
             description,
             "image": image.asset->url,
             "alt": image.alt
-        }`
+        }`,
+    {},
+    { cache: 'no-store' }
   );
 }

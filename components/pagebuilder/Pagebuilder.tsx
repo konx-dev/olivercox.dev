@@ -13,13 +13,11 @@ const sanityComponents: SanityComponents<any> = {
 };
 
 export default function PageBuilder({ ctx }: { ctx: object[] }) {
-  // console.log(ctx);
-
   return (
     <>
       {ctx.map((block: any, index: number) => {
-        console.log('pagebuilder', block);
         const SanityComponent = sanityComponents[block._type];
+        // console.log('pagebuilder', block);
         return (
           <div key={`${block._id}-${index}`}>
             <SanityComponent ctx={block} key={block._id} />
