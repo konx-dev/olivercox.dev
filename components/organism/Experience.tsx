@@ -1,7 +1,5 @@
 import { getExperience } from '@/sanity/queries/experience';
 import Link from 'next/link';
-import DateRange from '../atom/DateRange';
-import RichText from '../atom/RichText';
 import ExperienceCard from './cards/ExperienceCard';
 import SectionHeading from '../atom/SectionHeading';
 
