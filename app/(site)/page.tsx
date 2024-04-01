@@ -2,6 +2,7 @@
 import ExperienceWrapper from '@/components/organism/Experience';
 import ProjectsWrapper from '@/components/organism/Projects';
 import InsightsWrapper from '@/components/organism/Insights';
+import AboutWrapper from '@/components/organism/About';
 import RichText from '@/components/atom/RichText';
 
 // Queries
@@ -15,7 +16,7 @@ export default async function Home() {
   const globals = await getGlobals();
 
   return (
-    <section className="container px-4 flex flex-col lg:flex-row">
+    <section className="container px-4 pt-12 pb-6 flex flex-col lg:flex-row">
       {/* Left column */}
       <div>
         <div>-- logo (hardcode) --</div>
@@ -35,7 +36,7 @@ export default async function Home() {
       {/* Right column */}
       <div className="flex flex-col">
         <div className="order-3">
-          <RichText ctx={page.body} />
+          <AboutWrapper ctx={page.body} />
         </div>
         <div className="order-2">
           <ExperienceWrapper />
@@ -46,6 +47,10 @@ export default async function Home() {
         <div className="order-4">
           <InsightsWrapper insightsBody={page.insights} />
         </div>
+      </div>
+      <div className="lg:hidden mb-8">-- socials (hardcode) --</div>
+      <div className="lg:hidden text-center font-medium text-xs wysiwyg">
+        <RichText ctx={globals.builtWith} />
       </div>
     </section>
   );

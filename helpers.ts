@@ -13,7 +13,7 @@ export function refConvert(ref: string) {
 }
 
 // Accepts 2 arguments, the date to convert and an optional valid datefns format to convert to
-export function dateConvert(date: string, dateFormat: string) {
+export function dateConvert(date: string, dateFormat?: string) {
   // sanity provides all date types as 'yyyy-MM-dd'
   const cmsFormat = 'yyyy-MM-dd';
 

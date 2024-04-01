@@ -10,4 +10,20 @@
   .wysiwyg a {
     @apply dark:text-white-700 text-red-500 underline font-medium;
   }
+
+  .wysiwyg strong {
+    @apply dark:text-white-700 text-red-500 font-bold;
+  }
+
+  .insights-body p {
+    @apply text-body text-black-900 dark:text-black-500;
+  }
+
+  .insights-body h1,
+  .insights-body h2,
+  .insights-body h3,
+  .insights-body h4,
+  .insights-body h5 {
+    @apply text-heading-sm text-black-900 dark:text-white-700 mt-4 mb-2 font-medium;
+  }
 }
