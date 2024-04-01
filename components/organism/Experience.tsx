@@ -2,6 +2,7 @@ import { getExperience } from '@/sanity/queries/experience';
 import Link from 'next/link';
 import ExperienceCard from './cards/ExperienceCard';
 import SectionHeading from '../atom/SectionHeading';
+import { MdArrowRightAlt } from 'react-icons/md';
 
 export default async function Experience() {
   const experience = await getExperience();
@@ -14,9 +15,16 @@ export default async function Experience() {
           <ExperienceCard key={entry._id} ctx={entry} />
         ))}
       </div>
-      <div className="text-body font-medium mt-6">
-        <Link href="https://cv.konx.dev/" rel="noopener noreferrer" target="_blank">
-          View Full Resume
+      <div className="mt-6">
+        <Link
+          href="https://cv.konx.dev/"
+          rel="noopener noreferrer"
+          target="_blank"
+          className="flex flex-row gap-2 items-center">
+          <span className="text-body font-medium">View Full Resume</span>
+          <span className="text-[1.5rem]">
+            <MdArrowRightAlt />
+          </span>
         </Link>
       </div>
     </div>

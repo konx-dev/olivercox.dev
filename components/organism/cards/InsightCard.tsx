@@ -20,7 +20,9 @@ export default function InsightCard({ ctx }: { ctx: Insight }) {
       <div className="mt-4 text-xs leading-tight font-bold text-red-500 dark:text-blue-500">
         {dateConvert(ctx.publishedDate)}
       </div>
-      <div className="mt-2 text-lg leading-tight font-medium dark:text-white-700">{ctx.name}</div>
+      <div className="mt-2 text-black-900 dark:text-white-700 text-lg leading-tight font-medium">
+        <div className="">{ctx.name}</div>
+      </div>
     </Link>
   );
 }

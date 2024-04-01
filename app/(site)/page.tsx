@@ -9,6 +9,7 @@ import RichText from '@/components/atom/RichText';
 import { getHomepage } from '@/sanity/queries/homepage';
 import { getGlobals } from '@/sanity/queries/globals';
 import ThemeSwitch from '@/components/atom/ThemeSwitch';
+import Socials from '@/components/atom/Socials';
 
 export default async function Home() {
   const page = await getHomepage();
@@ -25,7 +26,9 @@ export default async function Home() {
           <RichText ctx={page.introduction} />
         </div>
 
-        <div className="hidden">-- socials (hardcode) --</div>
+        <div className="hidden">
+          <Socials />
+        </div>
         <div className="">
           <ThemeSwitch />
         </div>
@@ -48,7 +51,9 @@ export default async function Home() {
           <InsightsWrapper insightsBody={page.insights} />
         </div>
       </div>
-      <div className="lg:hidden mb-8">-- socials (hardcode) --</div>
+      <div className="lg:hidden mb-8">
+        <Socials />
+      </div>
       <div className="lg:hidden text-center font-medium text-xs wysiwyg">
         <RichText ctx={globals.builtWith} />
       </div>

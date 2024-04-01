@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 import ProjectCard from './cards/ProjectCard';
 import SectionHeading from '../atom/SectionHeading';
+import ArrowLink from '../atom/ArrowLink';
 
 export default async function Experience() {
   const projects = await getFeaturedProjects();
@@ -16,8 +17,8 @@ export default async function Experience() {
           <ProjectCard key={project._id} ctx={project} />
         ))}
       </div>
-      <div className="text-body font-medium mt-6">
-        <Link href="/projects">View Projects Archive</Link>
+      <div className="mt-6">
+        <ArrowLink target={'/projects'} callToAction={'View Projects Archive'} />
       </div>
     </div>
   );

@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
+import { MdNightlight } from 'react-icons/md';
+import { MdLightMode } from 'react-icons/md';
 import Image from 'next/image';
 
 export default function ThemeSwitch() {
@@ -24,10 +26,18 @@ export default function ThemeSwitch() {
     );
 
   if (resolvedTheme === 'dark') {
-    return <div onClick={() => setTheme('light')}>Light</div>;
+    return (
+      <div onClick={() => setTheme('light')}>
+        <MdLightMode />
+      </div>
+    );
   }
 
   if (resolvedTheme === 'light') {
-    return <div onClick={() => setTheme('dark')}>Dark</div>;
+    return (
+      <div onClick={() => setTheme('dark')}>
+        <MdNightlight />
+      </div>
+    );
   }
 }

@@ -5,6 +5,7 @@ import { PortableTextBlock } from 'sanity';
 import RichText from '../atom/RichText';
 import InsightCard from './cards/InsightCard';
 import SectionHeading from '../atom/SectionHeading';
+import ArrowLink from '../atom/ArrowLink';
 
 export default async function Experience({ insightsBody }: { insightsBody: PortableTextBlock[] }) {
   const insights = await getFeaturedInsights();
@@ -23,8 +24,8 @@ export default async function Experience({ insightsBody }: { insightsBody: Porta
           <InsightCard key={insight._id} ctx={insight} />
         ))}
       </div>
-      <div className="text-body font-medium mt-6">
-        <Link href="/insights">View all insights</Link>
+      <div className="mt-6">
+        <ArrowLink target={'/insights'} callToAction={'View all insights'} />
       </div>
     </div>
   );
