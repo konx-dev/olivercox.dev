@@ -1,5 +1,4 @@
 import { getFeaturedInsights } from '@/sanity/queries/insights';
-import Link from 'next/link';
 import { PortableTextBlock } from 'sanity';
 
 import RichText from '../atom/RichText';

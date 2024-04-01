@@ -1,5 +1,4 @@
 import { getFeaturedProjects } from '@/sanity/queries/projects';
-import Link from 'next/link';
 
 import ProjectCard from './cards/ProjectCard';
 import SectionHeading from '../atom/SectionHeading';
