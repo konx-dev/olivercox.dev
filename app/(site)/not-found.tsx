@@ -1,16 +1,12 @@
-'use client';
-
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import ClientButton from '@/components/client/Button';
 
 function NotFoundPage() {
-  const router = useRouter();
-
   return (
-    <div>
-      <h1>Oops.. something went wrong</h1>
-      <button onClick={() => router.back()}>Go Back</button>
-      <Link href="/">Return Home</Link>
+    <div className="flex flex-col px-4 justify-center items-center h-screen w-screen">
+      <h1 className="text-heading-xl text-center font-bold text-white-500">Oops.. something went wrong</h1>
+      <div className="mt-6 text-center">
+        <ClientButton />
+      </div>
     </div>
   );
 }
