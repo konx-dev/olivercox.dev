@@ -58,7 +58,7 @@ const project = {
         list: [
           { title: 'Vue', value: 'vue' },
           { title: 'React', value: 'react' },
-          { title: 'Vanilla JavaScript', value: 'vanillaJavascript' },
+          { title: 'Vanilla JavaScript', value: 'vanilla-javascript' },
           { title: 'TypeScript', value: 'typescript' }
         ]
       }

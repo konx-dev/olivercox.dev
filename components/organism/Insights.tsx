@@ -10,7 +10,7 @@ export default async function Experience({ insightsBody }: { insightsBody: Porta
   const insights = await getFeaturedInsights();
 
   return (
-    <div className="mb-8 lg:mb-16">
+    <div className="mb-8 lg:mb-10">
       <SectionHeading heading={'Insights'} />
       {insightsBody && (
         <div className="insights-body">

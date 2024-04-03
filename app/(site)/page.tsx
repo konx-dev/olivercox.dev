@@ -17,16 +17,16 @@ export default async function Home() {
   const globals = await getGlobals();
 
   return (
-    <section className="container px-4 pt-12 pb-6 flex flex-col lg:flex-row">
+    <section className="container px-4 pt-12 pb-6 flex flex-col lg:flex-row lg:justify-between">
       {/* Left column */}
-      <div>
+      <div className="max-w-[440px] lg:sticky lg:top-[50px] lg:h-min">
         <div>-- logo (hardcode) --</div>
         <h1 className="text-heading-xl font-bold mb-2">{page.heading}</h1>
         <div className="wysiwyg text-heading-md">
           <RichText ctx={page.introduction} />
         </div>
 
-        <div className="hidden">
+        <div className="hidden lg:flex my-10">
           <Socials />
         </div>
         <div className="">
@@ -37,14 +37,14 @@ export default async function Home() {
         </div>
       </div>
       {/* Right column */}
-      <div className="flex flex-col">
-        <div className="order-3">
+      <div className="flex flex-col max-w-[550px]">
+        <div className="order-3 lg:order-1">
           <AboutWrapper ctx={page.body} />
         </div>
         <div className="order-2">
           <ExperienceWrapper />
         </div>
-        <div className="order-1">
+        <div className="order-1 lg:order-3">
           <ProjectsWrapper />
         </div>
         <div className="order-4">

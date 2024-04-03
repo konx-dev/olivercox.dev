@@ -24,3 +24,23 @@ export function dateConvert(date: string, dateFormat?: string) {
 
   return format(parsedDate, targetFormat);
 }
+
+// Take an array of strings, seperate words and capitalise
+export function builtWithConvert(data: Array<String>) {
+  const capitalizeWords = (str: string, lower = false) => {
+    return (lower ? str.toLowerCase() : str).replace(/(?:^|\s|[\"'([{])+\S/g, (match) => match.toUpperCase());
+  };
+
+  const addCommas = (array: Array<String>) => {
+    return array.join(', ');
+  };
+
+  const formattedData = data.map((word) => {
+    return word
+      .split('-')
+      .map((subWord) => capitalizeWords(subWord))
+      .join(' ');
+  });
+
+  return addCommas(formattedData);
+}

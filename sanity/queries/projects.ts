@@ -16,7 +16,7 @@ export async function getProjects(): Promise<Project[]> {
             featured,
             year,
             madeAt,
-            builtWith,
+            "builtWith": builtWith.title,
             url,
             content
         }`

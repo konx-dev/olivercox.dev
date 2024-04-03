@@ -7,21 +7,23 @@ export default function InsightCard({ ctx }: { ctx: Insight }) {
   return (
     <Link
       href={`/insights/${ctx.slug}`}
-      className="border border-black-700 bg-white-100 dark:bg-black-900 p-4 rounded-lg">
-      <div className="h-[160px]">
+      className="flex flex-col lg:flex-row lg:items-center lg:gap-4 border border-black-700 bg-white-100 dark:bg-black-900 p-4 rounded-lg">
+      <div className="h-[160px] lg:min-w-[140px] lg:h-[80px]">
         <Image
-          className="h-[160px] w-full object-cover rounded-lg"
+          className="h-[160px] lg:h-[80px] lg:w-[140px] w-full object-cover rounded-lg"
           src={ctx.image}
           alt={ctx.alt}
           width={350}
           height={160}
         />
       </div>
-      <div className="mt-4 text-xs leading-tight font-bold text-red-500 dark:text-blue-500">
-        {dateConvert(ctx.publishedDate)}
-      </div>
-      <div className="mt-2 text-black-900 dark:text-white-700 text-lg leading-tight font-medium">
-        <div className="">{ctx.name}</div>
+      <div className="mt-4 lg:mt-0">
+        <div className="text-xs leading-tight font-bold text-red-500 dark:text-blue-500">
+          {dateConvert(ctx.publishedDate, 'do MMMM, yyyy')}
+        </div>
+        <div className="mt-2 text-black-900 dark:text-white-700 text-lg leading-tight font-medium">
+          <div className="">{ctx.name}</div>
+        </div>
       </div>
     </Link>
   );
