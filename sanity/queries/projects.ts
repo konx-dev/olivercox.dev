@@ -16,10 +16,12 @@ export async function getProjects(): Promise<Project[]> {
             featured,
             year,
             madeAt,
-            "builtWith": builtWith.title,
+            builtWith,
             url,
             content
-        }`
+        }`,
+    {},
+    { cache: 'no-store' }
   );
 }
 
