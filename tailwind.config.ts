@@ -76,6 +76,13 @@ const config: Config = {
           {
             lineHeight: 'clamp(2.125rem, 1.9681rem + 0.7843vi, 2.5rem)'
           }
+        ],
+        /* Heading (xxl) - Size: 32px → 56px | Leading: 38px → 60px */
+        'heading-xxl': [
+          'clamp(2rem, 1.4783rem + 2.6087vi, 3.5rem)',
+          {
+            lineHeight: 'clamp(2.375rem, 1.8967rem + 2.3913vi, 3.75rem)'
+          }
         ]
       }
     }

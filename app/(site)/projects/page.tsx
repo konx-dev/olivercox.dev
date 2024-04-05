@@ -1,3 +1,5 @@
+import ArrowLink from '@/components/atom/ArrowLink';
+import RichText from '@/components/atom/RichText';
 import ProjectCard from '@/components/organism/cards/ProjectCardThin';
 import { getProjectsLanding, getProjects } from '@/sanity/queries/projects';
 
@@ -6,17 +8,29 @@ export default async function Projects() {
 
   const projectsLanding = await getProjectsLanding();
 
+  console.log(projectsLanding);
+
   return (
-    <section>
-      <div>return home button</div>
-      <h1>Projects</h1>
-      <div className="container px-4">
-        {projects.map((project, index) => (
-          <>
-            <ProjectCard key={project._id} position={index} ctx={project} />
-            {index !== projects.length - 1 && <hr className="border border-black-700" />}
-          </>
-        ))}
+    <section className="my-10 lg:my-20">
+      <div className="container max-w-[1000px]">
+        <div className="px-4 mb-4 lg:mb-8">
+          <ArrowLink target={'/'} callToAction={'Return Home'} />
+        </div>
+        <div className="px-4 mb-8 lg:mb-12">
+          <h1 className="text-heading-xxl font-medium">{projectsLanding.name}</h1>
+        </div>
+        <div className="px-4">
+          {projects.map((project, index) => (
+            <>
+              <ProjectCard key={project._id} position={index} ctx={project} />
+              {index !== projects.length - 1 && <hr className="border border-black-700" />}
+            </>
+          ))}
+        </div>
+      </div>
+
+      <div className="mt-8 lg:mt-10 container max-w-[640px] text-center text-black-500 px-4 text-xs">
+        <RichText ctx={projectsLanding.disclaimer} />
       </div>
     </section>
   );
