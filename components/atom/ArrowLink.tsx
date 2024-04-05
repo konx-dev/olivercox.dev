@@ -1,11 +1,19 @@
 import Link from 'next/link';
 import { MdArrowRightAlt } from 'react-icons/md';
 
-export default function ArrowLink({ target, callToAction }: { target: string; callToAction: string }) {
+export default function ArrowLink({
+  target,
+  callToAction,
+  reversed
+}: {
+  target: string;
+  callToAction: string;
+  reversed?: Boolean;
+}) {
   return (
-    <Link href={target} className="flex flex-row gap-2 items-center">
+    <Link href={target} className={`flex gap-2 items-center ${reversed ? 'flex-row-reverse' : 'flex-row'}`}>
       <span className="text-body font-medium">{callToAction}</span>
-      <span className="text-[1.5rem]">
+      <span className={`text-[1.5rem] ${reversed ? 'rotate-180' : null}`}>
         <MdArrowRightAlt />
       </span>
     </Link>
