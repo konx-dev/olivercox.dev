@@ -1,3 +1,5 @@
+import ArrowLink from '@/components/atom/ArrowLink';
+import InsightCard from '@/components/organism/cards/InsightCardThin';
 import { getInsights, getInsightsLanding } from '@/sanity/queries/insights';
 
 export default async function Insights() {
@@ -6,20 +8,22 @@ export default async function Insights() {
   const insightsLanding = await getInsightsLanding();
 
   return (
-    <section>
-      <h1>{insightsLanding.name}</h1>
-      <div>
-        {insights.map((insight) => (
-          <div key={insight._id}>
-            <div>{insight.name}</div>
-            <div>{insight.publishedDate}</div>
-            <div>{insight.slug}</div>
-            <div>{insight.description}</div>
-            <div>{insight.author.name}</div>
-            <div>{insight.author.image.alt}</div>
-            <div>{insight.authorImage}</div>
-          </div>
-        ))}
+    <section className="my-10 lg:my-20">
+      <div className="container max-w-[1000px]">
+        <div className="px-4 mb-4 lg:mb-8 flex justify-start">
+          <ArrowLink target={'/'} callToAction={'Return Home'} reversed={true} />
+        </div>
+        <div className="px-4 mb-8 lg:mb-12">
+          <h1 className="text-heading-xxl font-medium">{insightsLanding.name}</h1>
+        </div>
+        <div className="px-4">
+          {insights.map((insight, index) => (
+            <>
+              <InsightCard key={insight._id} position={index} ctx={insight} />
+              {index !== insights.length - 1 && <hr key={insight._id} className="border border-black-700" />}
+            </>
+          ))}
+        </div>
       </div>
     </section>
   );

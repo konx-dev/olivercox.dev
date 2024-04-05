@@ -5,7 +5,7 @@ import { builtWithConvert } from '@/helpers';
 
 export default function ProjectCard({ ctx }: { ctx: Project }) {
   return (
-    <div className="flex flex-col lg:flex-row lg:items-center vlg:gap-4 border border-black-700 bg-white-100 dark:bg-black-900 p-4 rounded-lg">
+    <div className="flex flex-col lg:flex-row lg:items-center lg:gap-4 border border-black-700 bg-white-100 dark:bg-black-900 p-4 rounded-lg">
       <div className="h-[160px] lg:min-w-[140px]">
         <Image
           className="h-[160px] lg:w-[140px] w-full object-cover rounded-lg"

@@ -52,7 +52,9 @@ export async function getInsightsLanding(): Promise<InsightsLanding> {
       _id,
       _createdAt,
       name
-    }`
+    }`,
+    {},
+    { cache: 'no-store' }
   );
 }
 
