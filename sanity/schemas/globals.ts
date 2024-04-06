@@ -13,6 +13,19 @@ const globals = {
       title: 'Built with',
       type: 'array',
       of: [{ type: 'block' }]
+    },
+    {
+      name: 'profilePicture',
+      title: 'Profile Picture',
+      type: 'image',
+      options: { hotspot: true },
+      fields: [
+        {
+          name: 'alt',
+          title: 'Alt',
+          type: 'string'
+        }
+      ]
     }
   ]
 };

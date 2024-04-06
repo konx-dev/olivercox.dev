@@ -18,10 +18,10 @@ export default async function Insights() {
         </div>
         <div className="px-4">
           {insights.map((insight, index) => (
-            <>
-              <InsightCard key={insight._id} position={index} ctx={insight} />
-              {index !== insights.length - 1 && <hr key={insight._id} className="border border-black-700" />}
-            </>
+            <div key={insight._id}>
+              <InsightCard position={index} ctx={insight} />
+              {index !== insights.length - 1 && <hr className="border border-black-700" />}
+            </div>
           ))}
         </div>
       </div>

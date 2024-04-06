@@ -4,12 +4,13 @@ import ProjectsWrapper from '@/components/organism/Projects';
 import InsightsWrapper from '@/components/organism/Insights';
 import AboutWrapper from '@/components/organism/About';
 import RichText from '@/components/atom/RichText';
+import Image from 'next/image';
 
 // Queries
 import { getHomepage } from '@/sanity/queries/homepage';
 import { getGlobals } from '@/sanity/queries/globals';
-import ThemeSwitch from '@/components/atom/ThemeSwitch';
 import Socials from '@/components/atom/Socials';
+import { refConvert } from '@/helpers';
 
 export default async function Home() {
   const page = await getHomepage();
@@ -20,17 +21,25 @@ export default async function Home() {
     <section className="container px-4 pt-12 pb-6 flex flex-col lg:flex-row lg:justify-between">
       {/* Left column */}
       <div className="max-w-[440px] lg:sticky lg:top-[50px] lg:h-min">
-        <div>-- logo (hardcode) --</div>
-        <h1 className="text-heading-xl font-bold mb-2">{page.heading}</h1>
+        <div className="flex justify-center sm:justify-start">
+          <div className="rounded-full overflow-hidden">
+            <Image
+              src={refConvert(globals.profilePicture)}
+              alt={globals.alt}
+              width={180}
+              height={180}
+              sizes="(max-width: 768px) 50vw"
+            />
+          </div>
+        </div>
+
+        <h1 className="text-heading-xl font-bold mt-6 mb-2">{page.heading}</h1>
         <div className="wysiwyg text-heading-md">
           <RichText ctx={page.introduction} />
         </div>
 
         <div className="hidden lg:flex my-10">
           <Socials />
-        </div>
-        <div className="">
-          <ThemeSwitch />
         </div>
         <div className="hidden">
           <RichText ctx={globals.builtWith} />

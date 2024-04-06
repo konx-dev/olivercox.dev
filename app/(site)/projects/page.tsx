@@ -21,10 +21,10 @@ export default async function Projects() {
         </div>
         <div className="px-4">
           {projects.map((project, index) => (
-            <>
-              <ProjectCard key={project._id} position={index} ctx={project} />
-              {index !== projects.length - 1 && <hr key={project._id} className="border border-black-700" />}
-            </>
+            <div key={project._id}>
+              <ProjectCard position={index} ctx={project} />
+              {index !== projects.length - 1 && <hr className="border border-black-700" />}
+            </div>
           ))}
         </div>
       </div>

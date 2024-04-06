@@ -5,4 +5,6 @@ export type Globals = {
   _createdAt: Date;
   name: string;
   builtWith: PortableTextBlock[];
+  profilePicture: string;
+  alt: string;
 };

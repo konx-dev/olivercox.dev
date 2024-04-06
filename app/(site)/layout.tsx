@@ -7,6 +7,7 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 // SEO & Metadata
 import type { Metadata } from 'next';
+import ThemeSwitch from '@/components/atom/ThemeSwitch';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -21,7 +22,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} font-primary`}>
       <body className="bg-white-700 dark:bg-black-900 text-black-900 dark:text-white-700">
-        <Providers>{children}</Providers>
+        <Providers>
+          <main>{children}</main>
+          <div className="fixed bottom-[0px] right-5 bg-red-500 dark:bg-blue-500 p-2">
+            <ThemeSwitch />
+          </div>
+        </Providers>
       </body>
     </html>
   );
