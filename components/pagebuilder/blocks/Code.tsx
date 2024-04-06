@@ -1,7 +1,9 @@
 export default function Code({ ctx }: { ctx: any }) {
   return (
-    <pre className="p-2">
-      <code>{ctx.CodeSnippet.code}</code>
-    </pre>
+    <div className="border border-black-700 dark:bg-black-900 p-4 lg:p-8">
+      <pre>
+        <code>{ctx.CodeSnippet.code}</code>
+      </pre>
+    </div>
   );
 }

@@ -1,7 +1,6 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { MdArrowRightAlt } from 'react-icons/md';
 
 export default function ClientButton() {
   const router = useRouter();

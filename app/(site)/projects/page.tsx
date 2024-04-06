@@ -14,7 +14,7 @@ export default async function Projects() {
     <section className="my-10 lg:my-20">
       <div className="container max-w-[1000px]">
         <div className="px-4 mb-4 lg:mb-8 flex justify-start">
-          <ArrowLink target={'/'} callToAction={'Return Home'} reversed={true} />
+          <ArrowLink target={'/'} callToAction={'Return Home'} reversed />
         </div>
         <div className="px-4 mb-8 lg:mb-12">
           <h1 className="text-heading-xxl font-medium">{projectsLanding.name}</h1>
