@@ -24,7 +24,7 @@ export default function RootLayout({
       <body className="bg-white-700 dark:bg-black-900 text-black-900 dark:text-white-700">
         <Providers>
           <main>{children}</main>
-          <div className="fixed bottom-[0px] right-5 bg-red-500 dark:bg-blue-500 p-2">
+          <div className="fixed bottom-[0px] rounded-t-md cursor-pointer right-5 bg-red-500 dark:bg-blue-500">
             <ThemeSwitch />
           </div>
         </Providers>

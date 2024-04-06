@@ -14,8 +14,6 @@ export default async function Insight({ params }: Props) {
   const slug = params.insight;
   const insight = await getInsight(slug);
 
-  console.log(insight);
-
   if (!insight) {
     notFound();
   }
@@ -24,9 +22,11 @@ export default async function Insight({ params }: Props) {
     <section className="container max-w-[1100px] px-4 my-16 lg:my-32">
       <div>
         <h1 className="text-heading-xxl text-center font-bold mb-5">{insight.name}</h1>
-        <div className="text-heading-sm text-center font-medium text-black-500">{insight.description}</div>
+        <div className="text-heading-sm text-center font-medium text-red-500 dark:text-black-500">
+          {insight.description}
+        </div>
         <div className="flex flex-row my-4 lg:my-8 justify-center items-center gap-2">
-          <span className="text-heading-sm font-medium text-white-700">
+          <span className="text-heading-sm font-medium dark:text-white-700">
             {dateConvert(insight.publishedDate, 'do MMMM, yyyy')}
           </span>
           {/* <span className="rounded-full overflow-hidden">

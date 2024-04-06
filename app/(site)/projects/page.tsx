@@ -8,8 +8,6 @@ export default async function Projects() {
 
   const projectsLanding = await getProjectsLanding();
 
-  console.log(projectsLanding);
-
   return (
     <section className="my-10 lg:my-20">
       <div className="container max-w-[1000px]">

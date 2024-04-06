@@ -7,7 +7,7 @@ export default function ExperienceCard({ ctx }: { ctx: Experience }) {
   return (
     <div className="">
       <div>
-        <div className="mb-1">
+        <div className="mb-1 flex items-center">
           <span className="text-xs lg:text-base font-medium">{ctx.company}</span>
           <span className="text-red-500 dark:text-blue-500 px-2">|</span>
           <span className="text-xs text-black-900 dark:text-black-500">

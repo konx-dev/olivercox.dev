@@ -24,7 +24,7 @@ export default async function Experience({ insightsBody }: { insightsBody: Porta
         ))}
       </div>
       <div className="mt-6">
-        <ArrowLink target={'/insights'} callToAction={'View all insights'} />
+        <ArrowLink target={'/insights'} callToAction={'View All Insights'} />
       </div>
     </div>
   );
