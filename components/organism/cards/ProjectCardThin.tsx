@@ -3,7 +3,7 @@ import { builtWithConvert, dateConvert } from '@/helpers';
 import { MdLaunch } from 'react-icons/md';
 import Link from 'next/link';
 
-export default function ProjectCard({ ctx, position }: { ctx: Project; position: Number }) {
+export default function ProjectCard({ ctx, position }: { ctx: Project; position: number }) {
   return (
     <Link
       href={`${ctx.url ? ctx.url : null}`}

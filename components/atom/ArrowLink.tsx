@@ -8,7 +8,7 @@ export default function ArrowLink({
 }: {
   target: string;
   callToAction: string;
-  reversed?: Boolean;
+  reversed?: boolean;
 }) {
   return (
     <Link href={target} className={`flex gap-2 items-center ${reversed ? 'flex-row-reverse' : 'flex-row'}`}>
