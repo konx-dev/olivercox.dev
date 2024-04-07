@@ -1,6 +1,6 @@
 import { defineField, defineType } from 'sanity';
 
-export const contentSimpleType = defineType({
+export const ContentSimpleType = defineType({
   name: 'ContentSimple',
   type: 'object',
   title: 'Content',

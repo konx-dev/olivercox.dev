@@ -1,6 +1,6 @@
 import { defineField, defineType } from 'sanity';
 
-export const codeSnippetType = defineType({
+export const CodeSnippetType = defineType({
   name: 'CodeSnippet',
   type: 'object',
   title: 'Code',

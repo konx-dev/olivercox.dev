@@ -1,6 +1,6 @@
 import { defineField, defineType } from 'sanity';
 
-export const imageSingleType = defineType({
+export const ImageSingleType = defineType({
   name: 'ImageSingle',
   type: 'object',
   title: 'Image',

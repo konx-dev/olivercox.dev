@@ -13,10 +13,10 @@ import homepage from './singles/homepage';
 import globals from './globals';
 
 // Page Builder
-import { contentSimpleType } from './pageBuilder/ContentSimple';
-import { imageSingleType } from './pageBuilder/ImageSingle';
-import { dividerType } from './pageBuilder/Divider';
-import { codeSnippetType } from './pageBuilder/CodeSnippet';
+import { ContentSimpleType } from '@/sanity/schemas/pageBuilder/ContentSimpleType';
+import { ImageSingleType } from '@/sanity/schemas/pageBuilder/ImageSingleType';
+import { DividerType } from '@/sanity/schemas/pageBuilder/DividerType';
+import { CodeSnippetType } from '@/sanity/schemas/pageBuilder/CodeSnippetType';
 
 const schemas = [
   project,
@@ -27,10 +27,10 @@ const schemas = [
   insightsLanding,
   homepage,
   globals,
-  contentSimpleType,
-  imageSingleType,
-  dividerType,
-  codeSnippetType
+  ContentSimpleType,
+  ImageSingleType,
+  DividerType,
+  CodeSnippetType
 ];
 
 export default schemas;
