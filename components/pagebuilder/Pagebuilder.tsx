@@ -15,7 +15,7 @@ const sanityComponents: SanityComponents<any> = {
 export default function PageBuilder({ ctx }: { ctx: object[] }) {
   return (
     <>
-      {ctx.map((block: any, index: number) => {
+      {ctx.map((block: any) => {
         const SanityComponent = sanityComponents[block._type];
         return (
           <div key={block._id}>

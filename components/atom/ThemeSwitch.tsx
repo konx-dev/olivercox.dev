@@ -29,17 +29,17 @@ export default function ThemeSwitch() {
 
   if (resolvedTheme === 'dark') {
     return (
-      <div className="text-white-700 text-lg p-2" onClick={() => setTheme('light')}>
+      <button className="text-white-700 text-lg p-2" onClick={() => setTheme('light')}>
         <MdLightMode />
-      </div>
+      </button>
     );
   }
 
   if (resolvedTheme === 'light') {
     return (
-      <div className="text-white-700 text-lg p-2" onClick={() => setTheme('dark')}>
+      <button className="text-white-700 text-lg p-2" onClick={() => setTheme('dark')}>
         <MdNightlight />
-      </div>
+      </button>
     );
   }
 }

@@ -3,7 +3,6 @@ import RichText from '@/components/atom/RichText';
 import PageBuilder from '@/components/pagebuilder/Pagebuilder';
 import { getInsight } from '@/sanity/queries/insights';
 import { notFound } from 'next/navigation';
-import Image from 'next/image';
 import { dateConvert } from '@/helpers';
 
 type Props = {

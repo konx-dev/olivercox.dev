@@ -1,11 +1,21 @@
 import { refConvert } from '@/helpers';
 import Image from 'next/image';
 
-export default function ImageSingle({ ctx }: { ctx: any }) {
+type ImageBlock = {
+  image: {
+    _type: string;
+    alt: string;
+    asset: {
+      _ref: string;
+    };
+  };
+};
+
+export default function ImageSingle({ ctx }: { ctx: ImageBlock }) {
   return (
     <div className="my-5 lg:my-10 rounded-lg overflow-hidden">
       <Image
-        src={refConvert(ctx.image)}
+        src={refConvert(ctx.image.asset._ref)}
         alt={ctx.image.alt}
         width={800}
         height={500}
