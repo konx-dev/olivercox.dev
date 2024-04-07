@@ -5,7 +5,7 @@ import clientConfig from '@/sanity/config/client-config';
 // Retrieve insights landing content
 export async function getExperience(): Promise<Experience[]> {
   return await createClient(clientConfig).fetch(
-    groq`*[_type == "experience" && enabled]{
+    groq`*[_type == "experience" && enabled] | order(startYear desc) {
         _id,
         _createdAt,
         name,

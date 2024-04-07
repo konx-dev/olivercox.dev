@@ -20,9 +20,13 @@ export function dateConvert(date: string, dateFormat?: string) {
   // optionally provide a custom format or use the default that will output 'May, 2024'
   const targetFormat = dateFormat ? dateFormat : 'MMM, yyyy';
 
-  const parsedDate = parse(date, cmsFormat, new Date());
+  if (date === null) {
+    return 'PRESENT';
+  } else {
+    const parsedDate = parse(date, cmsFormat, new Date());
 
-  return format(parsedDate, targetFormat);
+    return format(parsedDate, targetFormat);
+  }
 }
 
 // Take an array of strings, seperate words and capitalise
