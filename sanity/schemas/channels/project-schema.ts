@@ -59,7 +59,15 @@ const project = {
           { title: 'Vue', value: 'vue' },
           { title: 'React', value: 'react' },
           { title: 'Vanilla JavaScript', value: 'vanilla-javascript' },
-          { title: 'TypeScript', value: 'typescript' }
+          { title: 'TypeScript', value: 'typescript' },
+          { title: 'Wordpress', value: 'wordpress' },
+          { title: 'SCSS', value: 'scss' },
+          { title: 'TailwindCSS', value: 'tailwindcss' },
+          { title: 'Nuxt', value: 'nuxt' },
+          { title: 'CraftCMS', value: 'craftcms' },
+          { title: 'Twig', value: 'twig' },
+          { title: 'Sanity', value: 'sanity' },
+          { title: 'Next', value: 'next' }
         ]
       }
     },
