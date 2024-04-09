@@ -20,7 +20,7 @@ export default async function Home() {
   return (
     <section className="container px-4 pt-12 pb-6 flex flex-col lg:flex-row lg:justify-between">
       {/* Left column */}
-      <div className="max-w-[440px] lg:sticky lg:top-[50px] lg:h-min">
+      <div className="lg:max-w-[440px] lg:sticky lg:top-[50px] lg:h-min">
         <div className="flex justify-center sm:justify-start">
           <div className="rounded-full overflow-hidden">
             <Image
@@ -46,7 +46,7 @@ export default async function Home() {
         </div>
       </div>
       {/* Right column */}
-      <div className="flex flex-col max-w-[550px]">
+      <div className="flex flex-col lg:max-w-[550px]">
         <div className="order-3 lg:order-1">
           <AboutWrapper ctx={page.body} />
         </div>
@@ -63,7 +63,7 @@ export default async function Home() {
       <div className="lg:hidden mb-8">
         <Socials />
       </div>
-      <div className="lg:hidden text-center font-medium text-xs wysiwyg">
+      <div className="lg:hidden mx-auto max-w-[400px] text-center font-medium text-xs wysiwyg">
         <RichText ctx={globals.builtWith} />
       </div>
     </section>

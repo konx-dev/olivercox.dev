@@ -17,11 +17,11 @@ export default async function Experience() {
       </div>
       <div className="mt-6">
         <Link
-          href="https://cv.konx.dev/"
+          href="https://www.linkedin.com/in/konxdev/"
           rel="noopener noreferrer"
           target="_blank"
           className="flex flex-row gap-2 items-center">
-          <span className="text-body font-medium">View Full Resume</span>
+          <span className="text-body font-medium">View Full LinkedIn Resume</span>
           <span className="text-[1.5rem]">
             <MdArrowRightAlt />
           </span>
