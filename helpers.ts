@@ -31,19 +31,12 @@ export function dateConvert(date: string, dateFormat?: string) {
 
 // Take an array of strings, seperate words and capitalise
 export function builtWithConvert(data: Array<string>) {
-  const capitalizeWords = (str: string, lower = false) => {
-    return (lower ? str.toLowerCase() : str).replace(/^(?:^|\s|["'([{])+\S/g, (match) => match.toUpperCase());
-  };
-
   const addCommas = (array: Array<string>) => {
     return array.join(', ');
   };
 
   const formattedData = data.map((word) => {
-    return word
-      .split('-')
-      .map((subWord) => capitalizeWords(subWord))
-      .join(' ');
+    return word.split('-').join(' ');
   });
 
   return addCommas(formattedData);

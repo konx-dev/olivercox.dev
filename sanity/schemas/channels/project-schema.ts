@@ -56,18 +56,18 @@ const project = {
       of: [{ type: 'string' }],
       options: {
         list: [
-          { title: 'Nuxt', value: 'nuxt' },
-          { title: 'Next', value: 'next' },
-          { title: 'Vue', value: 'vue' },
-          { title: 'React', value: 'react' },
-          { title: 'Vanilla JavaScript', value: 'vanilla-javascript' },
-          { title: 'TypeScript', value: 'typescript' },
-          { title: 'Twig', value: 'twig' },
-          { title: 'TailwindCSS', value: 'tailwindcss' },
-          { title: 'SCSS', value: 'scss' },
-          { title: 'CraftCMS', value: 'craftcms' },
-          { title: 'Wordpress', value: 'wordpress' },
-          { title: 'Sanity', value: 'sanity' }
+          { title: 'Nuxt', value: 'Nuxt' },
+          { title: 'Next', value: 'Next' },
+          { title: 'Vue', value: 'Vue' },
+          { title: 'React', value: 'React' },
+          { title: 'Vanilla JavaScript', value: 'Vanilla-Javascript' },
+          { title: 'TypeScript', value: 'TypeScript' },
+          { title: 'Twig', value: 'Twig' },
+          { title: 'TailwindCSS', value: 'TailwindCSS' },
+          { title: 'SCSS', value: 'SCSS' },
+          { title: 'CraftCMS', value: 'CraftCMS' },
+          { title: 'Wordpress', value: 'Wordpress' },
+          { title: 'Sanity', value: 'Sanity' }
         ]
       }
     },

@@ -7,7 +7,7 @@ import { Project, ProjectsLanding } from '@/types/Project';
 // Retrieve ALL available projects
 export async function getProjects(): Promise<Project[]> {
   return await createClient(clientConfig).fetch(
-    groq`*[_type == "project"]{
+    groq`*[_type == "project"] | order(year desc) {
             _id,
             _createdAt,
             name,
