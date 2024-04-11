@@ -2,6 +2,8 @@
 import '@/styles/globals.css';
 import { Providers } from './providers';
 import { Inter } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
@@ -23,7 +25,11 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} font-primary`}>
       <body className="bg-white-700 dark:bg-black-900 text-black-900 dark:text-white-700">
         <Providers>
-          <main>{children}</main>
+          <main>
+            {children}
+            <Analytics />
+            <SpeedInsights />
+          </main>
           <div className="fixed bottom-[0px] rounded-t-md cursor-pointer right-5 bg-red-500 dark:bg-blue-500">
             <ThemeSwitch />
           </div>
