@@ -9,6 +9,18 @@ type Props = {
   params: { insight: string };
 };
 
+// SEO & Metadata
+import type { Metadata, ResolvingMetadata } from 'next';
+
+export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {
+  const slug = params.insight;
+  const insight = await getInsight(slug);
+
+  return {
+    title: insight ? insight.name : 'Oops.. something went wrong'
+  };
+}
+
 export default async function Insight({ params }: Props) {
   const slug = params.insight;
   const insight = await getInsight(slug);

@@ -3,6 +3,17 @@ import RichText from '@/components/atom/RichText';
 import ProjectCard from '@/components/organism/cards/ProjectCardThin';
 import { getProjectsLanding, getProjects } from '@/sanity/queries/projects';
 
+// SEO & Metadata
+import type { Metadata, ResolvingMetadata } from 'next';
+
+export async function generateMetadata(parent: ResolvingMetadata): Promise<Metadata> {
+  const projectsLanding = await getProjectsLanding();
+
+  return {
+    title: projectsLanding.name
+  };
+}
+
 export default async function Projects() {
   const projects = await getProjects();
 
