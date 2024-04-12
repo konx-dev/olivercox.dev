@@ -1,12 +1,11 @@
 import ArrowLink from '@/components/atom/ArrowLink';
 import InsightCard from '@/components/organism/cards/InsightCardThin';
 import { getInsights, getInsightsLanding } from '@/sanity/queries/insights';
-import insightsLanding from '@/sanity/schemas/singles/insights-landing';
 
 // SEO & Metadata
-import type { Metadata, ResolvingMetadata } from 'next';
+import type { Metadata } from 'next';
 
-export async function generateMetadata(parent: ResolvingMetadata): Promise<Metadata> {
+export async function generateMetadata(): Promise<Metadata> {
   const insightsLanding = await getInsightsLanding();
 
   return {

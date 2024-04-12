@@ -4,9 +4,9 @@ import ProjectCard from '@/components/organism/cards/ProjectCardThin';
 import { getProjectsLanding, getProjects } from '@/sanity/queries/projects';
 
 // SEO & Metadata
-import type { Metadata, ResolvingMetadata } from 'next';
+import type { Metadata } from 'next';
 
-export async function generateMetadata(parent: ResolvingMetadata): Promise<Metadata> {
+export async function generateMetadata(): Promise<Metadata> {
   const projectsLanding = await getProjectsLanding();
 
   return {
