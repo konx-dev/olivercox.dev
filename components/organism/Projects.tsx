@@ -11,7 +11,7 @@ export default async function Experience() {
     <div className="my-8 lg:mt-0 lg:mb-10">
       <SectionHeading heading={'Projects'} />
 
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col sm:flex-row sm:flex-wrap lg:flex-col gap-5">
         {projects.map((project) => (
           <ProjectCard key={project._id} ctx={project} />
         ))}

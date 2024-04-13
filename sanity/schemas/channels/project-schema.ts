@@ -67,7 +67,9 @@ const project = {
           { title: 'SCSS', value: 'SCSS' },
           { title: 'CraftCMS', value: 'CraftCMS' },
           { title: 'Wordpress', value: 'Wordpress' },
-          { title: 'Sanity', value: 'Sanity' }
+          { title: 'Sanity', value: 'Sanity' },
+          { title: 'Magento', value: 'Magento' },
+          { title: 'GSAP', value: 'GSAP' }
         ]
       }
     },

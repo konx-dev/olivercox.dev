@@ -18,7 +18,7 @@ export default async function Experience({ insightsBody }: { insightsBody: Porta
         </div>
       )}
 
-      <div className="flex flex-col gap-5 my-6">
+      <div className="flex flex-col sm:flex-row sm:flex-wrap lg:flex-col gap-5 my-6">
         {insights.map((insight) => (
           <InsightCard key={insight._id} ctx={insight} />
         ))}

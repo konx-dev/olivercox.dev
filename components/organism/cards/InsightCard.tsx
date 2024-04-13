@@ -7,7 +7,7 @@ export default function InsightCard({ ctx }: { ctx: Insight }) {
   return (
     <Link
       href={`/insights/${ctx.slug}`}
-      className="flex flex-col lg:flex-row lg:items-center lg:gap-4 border border-black-700 transition-colors duration-200 hover:bg-white-100 dark:hover:bg-black-900 p-4 rounded-lg">
+      className="flex flex-col lg:flex-row lg:items-center lg:gap-4 sm:w-[48%] lg:w-full border border-black-700 transition-colors duration-200 hover:bg-white-100 dark:hover:bg-black-900 p-4 rounded-lg">
       <div className="h-[160px] lg:min-w-[140px] lg:h-[80px]">
         <Image
           className="h-[160px] lg:h-[80px] lg:w-[140px] w-full object-cover rounded-lg"

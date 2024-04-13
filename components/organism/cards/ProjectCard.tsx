@@ -11,7 +11,7 @@ export default function ProjectCard({ ctx }: { ctx: Project }) {
       href={ctx.url ? ctx.url : '/'}
       rel="noopener noreferrer"
       target="_blank"
-      className={`flex flex-col lg:flex-row lg:items-center lg:gap-4 border border-black-700 transition-colors duration-200  p-4 rounded-lg ${
+      className={`flex flex-col sm:w-[48%] lg:w-full lg:flex-row lg:items-center lg:gap-4 border border-black-700 transition-colors duration-200  p-4 rounded-lg ${
         ctx.url ? 'hover:bg-white-100 dark:hover:bg-black-900 cursor-pointer' : 'pointer-events-none'
       } `}>
       <div className="h-[160px] lg:min-w-[140px]">
