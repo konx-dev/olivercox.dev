@@ -10,11 +10,11 @@ export default function ProjectCard({ ctx, position }: { ctx: Project; position:
       rel="noopener noreferrer"
       target="_blank"
       className={`flex flex-row md:gap-4 lg:gap-12 font-medium text-sm ${ctx.url ? '' : 'pointer-events-none'}`}>
-      <div className="flex flex-col w-1/4 md:w-[5%]">
+      <div className="flex flex-col w-[20%] md:w-[5%]">
         {position === 0 && <div className="text-red-500 dark:text-blue-500 text-sm">Year</div>}
         <div className="py-4">{dateConvert(ctx.year, 'yyyy')}</div>
       </div>
-      <div className="flex flex-col w-3/4 md:w-[30%]">
+      <div className="flex flex-col w-[70%] md:w-[30%]">
         {position === 0 && <div className="text-red-500 dark:text-blue-500 text-sm">Project</div>}
         <div className="py-4">{ctx.name}</div>
       </div>
@@ -26,7 +26,7 @@ export default function ProjectCard({ ctx, position }: { ctx: Project; position:
         {position === 0 && <div className="text-red-500 dark:text-blue-500 text-sm">Built with</div>}
         {ctx.builtWith && <div className="dark:text-black-500 py-4">{builtWithConvert(ctx.builtWith)}</div>}
       </div>
-      <div className="hidden md:flex md:flex-col md:w-[5%]">
+      <div className="w-[10%] md:flex md:flex-col md:w-[5%]">
         {position === 0 && <div className="text-red-500 dark:text-blue-500 text-sm">Link</div>}
         {ctx.url && (
           <div className="py-4">
