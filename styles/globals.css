@@ -43,11 +43,24 @@
     @apply dark:text-white-700 text-red-500 font-bold;
   }
 
-  .pb-wysiwyg h1,
-  .pb-wysiwyg h2,
-  .pb-wysiwyg h3,
+  .pb-wysiwyg p {
+    @apply text-body text-black-900 dark:text-black-500 mb-2;
+  }
+
+  .pb-wysiwyg ul {
+    @apply my-4 flex flex-col gap-2;
+  }
+
+  .pb-wysiwyg li {
+    @apply list-disc list-inside;
+  }
+
+  .pb-wysiwyg h3 {
+    @apply text-heading-md text-black-900 dark:text-white-700 mb-4 font-bold;
+  }
+
   .pb-wysiwyg h4,
   .pb-wysiwyg h5 {
-    @apply text-heading-md text-black-900 dark:text-white-700 mb-4 font-bold;
+    @apply text-heading-sm text-black-900 dark:text-white-700 mb-4 font-bold;
   }
 }

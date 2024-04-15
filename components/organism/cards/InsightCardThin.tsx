@@ -15,7 +15,7 @@ export default function InsightCard({ ctx, position }: { ctx: Insight; position:
       </div>
       <div className="hidden md:flex md:flex-col md:w-[55%]">
         {position === 0 && <div className="text-red-500 dark:text-blue-500 text-sm">Description</div>}
-        {ctx.description && <div className="text-black-500 py-4 capitalize">{ctx.description}</div>}
+        {ctx.description && <div className="text-black-500 py-4">{ctx.description}</div>}
       </div>
     </Link>
   );
