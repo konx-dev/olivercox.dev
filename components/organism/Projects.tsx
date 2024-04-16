@@ -17,7 +17,7 @@ export default async function Experience() {
         ))}
       </div>
       <div className="mt-6">
-        <ArrowLink target={'/projects'} callToAction={'View Projects Archive'} />
+        <ArrowLink target={'/projects'} callToAction={'View Project Archive'} />
       </div>
     </div>
   );
