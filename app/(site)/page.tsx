@@ -41,7 +41,7 @@ export default async function Home() {
         <div className="hidden lg:flex my-10">
           <Socials />
         </div>
-        <div className="hidden">
+        <div className="hidden text-xs lg:block">
           <RichText ctx={globals.builtWith} />
         </div>
       </div>
