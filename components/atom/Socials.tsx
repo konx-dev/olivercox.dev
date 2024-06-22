@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { FaGithubSquare } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
-// import { FaEnvelopeSquare } from 'react-icons/fa';
 
 export default function Socials() {
   return (
@@ -24,15 +23,6 @@ export default function Socials() {
           <FaLinkedin />
         </span>
       </Link>
-      {/* <Link
-        href="https://cv.konx.dev/"
-        rel="noopener noreferrer"
-        target="_blank"
-        className="hover:text-red-500 dark:hover:text-white-100 transition duration-500">
-        <span className="text-[1.75rem] lg:text-[2.5rem]">
-          <FaEnvelopeSquare />
-        </span>
-      </Link> */}
     </div>
   );
 }
