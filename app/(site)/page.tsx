@@ -34,9 +34,14 @@ export default async function Home() {
         </div>
 
         <h1 className="text-heading-xl font-bold mt-6 mb-2">{page.heading}</h1>
+
         <div className="wysiwyg text-heading-md">
           <RichText ctx={page.introduction} />
         </div>
+
+        <p className="text-sm font-primary text-red-500 dark:text-blue-500 mt-5">
+          JavaScript (Vue/React) | TailwindCSS | CraftCMS & Sanity.io
+        </p>
 
         <div className="hidden lg:flex my-10">
           <Socials />
