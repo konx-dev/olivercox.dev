@@ -8,7 +8,7 @@ export default async function Experience() {
   const projects = await getFeaturedProjects();
 
   return (
-    <div className="my-8 lg:mt-0 lg:mb-10">
+    <div className="">
       <SectionHeading heading={'Projects'} />
 
       <div className="flex flex-col sm:flex-row sm:flex-wrap lg:flex-col gap-5">
