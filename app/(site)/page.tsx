@@ -35,7 +35,7 @@ export default async function Home() {
 
         <h1 className="text-heading-xl font-bold mt-6 mb-2">{page.heading}</h1>
 
-        <div className="wysiwyg text-heading-md">
+        <div className="wysiwyg text-heading-md flex flex-col gap-2">
           <RichText ctx={page.introduction} />
         </div>
 
@@ -51,17 +51,17 @@ export default async function Home() {
         </div>
       </div>
       {/* Right column */}
-      <div className="flex flex-col lg:max-w-[550px]">
-        <div className="order-3 lg:order-1">
+      <div className="flex flex-col gap-8 lg:gap-10 my-10 lg:mt-0 lg:max-w-[550px]">
+        <div className="order-4 lg:order-2">
           <AboutWrapper ctx={page.body} />
         </div>
-        <div className="order-2">
+        <div className="order-3">
           <ExperienceWrapper />
         </div>
-        <div className="order-1 lg:order-3">
+        <div className="order-4">
           <ProjectsWrapper />
         </div>
-        <div className="order-4">
+        <div className="order-1">
           <InsightsWrapper insightsBody={page.insights} />
         </div>
       </div>

@@ -8,7 +8,7 @@ export default async function Experience() {
   const experience = await getExperience();
 
   return (
-    <div className="mb-8 lg:mb-10">
+    <div className="">
       <SectionHeading heading={'Experience'} />
       <div className="flex flex-col gap-5">
         {experience.map((entry) => (

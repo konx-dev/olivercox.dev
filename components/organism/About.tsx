@@ -4,9 +4,9 @@ import SectionHeading from '../atom/SectionHeading';
 
 export default function About({ ctx }: { ctx: PortableTextBlock[] }) {
   return (
-    <div className="mb-8 lg:mb-10">
+    <div className="">
       <SectionHeading heading={'About'} />
-      <div className="text-sm lg:text-lg wysiwyg">
+      <div className="text-sm lg:text-lg wysiwyg flex flex-col gap-4">
         <RichText ctx={ctx} />
       </div>
     </div>

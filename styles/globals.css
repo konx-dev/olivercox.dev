@@ -48,7 +48,7 @@
   }
 
   .pb-wysiwyg ul {
-    @apply my-4 flex flex-col gap-2;
+    @apply my-4 flex flex-col gap-4;
   }
 
   .pb-wysiwyg li {

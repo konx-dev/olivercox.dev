@@ -15,7 +15,7 @@ export default function ExperienceCard({ ctx }: { ctx: Experience }) {
           </span>
         </div>
         <div className="font-medium text-heading-sm mb-2">{ctx.role}</div>
-        <div className="text-body text-black-900 dark:text-black-500">
+        <div className="text-body pb-wysiwyg text-black-900 dark:text-black-500">
           <RichText ctx={ctx.description} />
         </div>
       </div>
