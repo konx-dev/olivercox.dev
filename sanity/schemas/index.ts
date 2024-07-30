@@ -17,6 +17,7 @@ import { ContentSimpleType } from '@/sanity/schemas/pageBuilder/ContentSimpleTyp
 import { ImageSingleType } from '@/sanity/schemas/pageBuilder/ImageSingleType';
 import { DividerType } from '@/sanity/schemas/pageBuilder/DividerType';
 import { CodeSnippetType } from '@/sanity/schemas/pageBuilder/CodeSnippetType';
+import { QuoteType } from '@/sanity/schemas/pageBuilder/QuoteType';
 
 const schemas = [
   project,
@@ -30,7 +31,8 @@ const schemas = [
   ContentSimpleType,
   ImageSingleType,
   DividerType,
-  CodeSnippetType
+  CodeSnippetType,
+  QuoteType
 ];
 
 export default schemas;

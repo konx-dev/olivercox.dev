@@ -9,7 +9,8 @@ const sanityComponents: SanityComponents<any> = {
   ContentSimple: dynamic(() => import('@/components/pagebuilder/blocks/ContentSimple')),
   ImageSingle: dynamic(() => import('@/components/pagebuilder/blocks/ImageSingle')),
   Code: dynamic(() => import('@/components/pagebuilder/blocks/Code')),
-  Divider: dynamic(() => import('@/components/pagebuilder/blocks/Divider'))
+  Divider: dynamic(() => import('@/components/pagebuilder/blocks/Divider')),
+  Quote: dynamic(() => import('@/components/pagebuilder/blocks/Quote'))
 };
 
 export default function PageBuilder({ ctx }: { ctx: object[] }) {
