@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} font-primary`}>
+    <html lang="en" suppressHydrationWarning className={`${inter.variable} font-primary`}>
       <body className="bg-white-700 dark:bg-black-900 text-black-900 dark:text-white-700">
         <Providers>
           <main>

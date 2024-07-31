@@ -16,10 +16,10 @@ export default function ProjectCard({ ctx }: { ctx: Project }) {
       } `}>
       <div className="h-[160px] lg:min-w-[140px]">
         <Image
-          className="h-[160px] lg:w-[140px] w-full object-cover rounded-lg"
+          className="h-[160px] w-full lg:w-[140px] object-cover rounded-lg"
           src={ctx.image}
           alt={ctx.alt}
-          width={350}
+          width={400}
           height={160}
         />
       </div>
