@@ -1,11 +1,11 @@
 // Styles, Theming & Fonts
-import '@/styles/globals.css';
 import { Providers } from './providers';
 import { Inter } from 'next/font/google';
+import '@/styles/globals.css';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
 
 import ThemeSwitch from '@/components/atom/ThemeSwitch';
 
