@@ -53,16 +53,16 @@ export default async function Home() {
       </div>
       {/* Right column */}
       <div className="flex flex-col gap-8 lg:gap-10 my-10 lg:mt-0 lg:max-w-[550px]">
-        <div className="order-4 lg:order-2">
+        <div className="order-1">
           <AboutWrapper ctx={page.body} />
         </div>
-        <div className="order-3">
+        <div className="order-2">
           <ExperienceWrapper />
         </div>
-        <div className="order-4">
+        <div className="order-3">
           <ProjectsWrapper />
         </div>
-        <div className="order-1">
+        <div className="order-4">
           <InsightsWrapper insightsBody={page.insights} />
         </div>
       </div>

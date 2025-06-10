@@ -13,10 +13,11 @@ import ThemeSwitch from '@/components/atom/ThemeSwitch';
 import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: {
-    default: 'Frontend Developer | olivercox.dev',
+    default: 'Senior Front-end Developer | olivercox.dev',
     template: '%s | olivercox.dev'
   },
-  description: 'front-end developer based in Nottingham, UK. Building bespoke, performant and accessible solutions'
+  description:
+    'Senior Front-end Developer based in Nottingham, UK. Building bespoke, performant and accessible solutions'
 };
 
 export default function RootLayout({
